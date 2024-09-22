@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: airbnb
+data:
+  db-url: mongodb://mongodb-service:27017

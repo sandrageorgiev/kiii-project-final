@@ -1,0 +1,27 @@
+services:
+    backend:
+        image: sandrageorgiev/api
+        container_name: backend
+        build:
+            context: ./Airbnb
+        ports:
+            - "8080:8080"
+        depends_on:
+            - mongodb
+    frontend:
+        image: sandrageorgiev/frontend
+        container_name: frontend
+        build:
+            context: ./airbnbfrontend
+        ports:
+            - "3000:3000"
+        stdin_open: true
+        depends_on: 
+            - backend
+    mongodb:
+        image: mongo
+        container_name: mongo
+        ports:
+            - "27018:27017"
+        volumes:
+            - "./data:/data/db"
