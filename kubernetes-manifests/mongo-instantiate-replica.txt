@@ -9,3 +9,10 @@ rs.initiate({
     { _id: 2, host: "mongodb-2.mongodb-service:27017", priority: 1 }
   ]
 })
+
+
+se vrzuvam na shell vo toj pod i ja izvrsuvam komadnata mongo shell
+i so inititate se kazuva deka tie 3 mongo instanci treba da funkcioniraat kako replica set
+
+headless service
+kaj mongon e headless
